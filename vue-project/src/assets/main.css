@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@media(min-width: 1200px){ /*ecли экрана больше 1200*/
+    html{
+        font-size: 20px;
+    }
+}
+@media(max-width: 600px){ /*ecли экрана меньше 1200*/
+    html{
+        font-size: 16px;
+    }
+}
+@media(max-width: 600px) and (min-width:1200px){
+    html{
+        font-size: 18px;
+    }
+}
+
+.wrapper{
+    background-color: #29252b;
+}
+.colorWhite{
+    color: white;
+}
+.backgroundGreen{
+    background-color: #618967;
+    border-radius: 50%;
+}
+.doJustFlex{
+    display: flex;
+}
+.button{
+    width: 6%;
+    height: 30px;
+    border-radius: 10px;
+}
+.textSizeHalf{
+    font-size: 0.5em;
+}
+hr{
+    color: #504B4A;
+}
+.wrapper2{
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    margin: 50px auto;
+}
