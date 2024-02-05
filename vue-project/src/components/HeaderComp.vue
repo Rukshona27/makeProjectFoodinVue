@@ -9,7 +9,7 @@
                 <span class="material-symbols-outlined colorWhite">phone_in_talk</span>
                 <div><p class="colorWhite textSizeHalf">Контакты</p><p class="colorWhite textSizeHalf">+7(916)510-57-59</p></div>
             </div>
-            <button class="button backgroundGreen colorWhite">Корзина</button>
+            <button class="button backgroundGreen colorWhite"><basket-button></basket-button></button>
         </nav>
         <div class="banner"></div>
         <hr>
@@ -17,7 +17,12 @@
 </template>
 
 <script>
-
+import BasketButton from "./BasketButton.vue";
+export default{
+    components:{
+        BasketButton,
+    }
+}
 </script>
 
 <style scoped>
@@ -57,8 +62,6 @@
   white-space: nowrap;
   word-wrap: normal;
   direction: ltr;
-  -webkit-font-feature-settings: 'liga';
-  -webkit-font-smoothing: antialiased;
   background-color: #618967;
   border-radius: 8px;
   padding-top: 3px;

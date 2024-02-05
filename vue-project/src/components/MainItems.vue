@@ -1,26 +1,30 @@
 <template>
     <div class="products colorWhite">
+            <img :src="img">
             <div class="doJustFlex pWeight" >
                 <h4 class="elem">{{ name }}</h4>
                 <p class="textSizeHalf elem">{{ weight }}</p>
             </div>
             <p class="textSizeHalf elem">{{ description }}</p>
-            <p class="elem">{{ price }}</p>
+            <p class="elem">{{price}} ₽</p>
             <div class="doJustFlex btnFlex">
-                <button type="button" class="plus btn colorWhite">+</button>
+                <button type="button" v-on:click="addToBasket(id)" class="plus btn colorWhite">+</button>
                 <button type="button" class="minus btn colorWhite">-</button>
             </div>
     </div>
 </template>
 
 <script>
+// const ruble = num => `$${num} ₽`;
+// export { ruble };
     export default{
-        props:['id', 'name', 'description', 'weight', 'price' ],
-        data(){
-            return{
+        props:['id', 'name', 'description', 'weight', 'price', 'img'],
+        methods:{
+            addToBasket(id){
+                this.$store.dispatch('addToBasket', id);
             }
         },
-        methods:{},
+        // ruble,
         emits:[]
     }
 </script>
@@ -70,13 +74,6 @@
     }
     .elem{
         padding-top: 6px;
-    }
-    .btn{
-        background-color: #57865e;
-        border: 1px solid white;
-        border-radius: 10px;
-        font-size: 1em;
-        width: 25px;
     }
     .btnFlex{
         justify-content: end;

@@ -48,3 +48,27 @@ hr{
     width: 95%;
     margin: 50px auto;
 }
+.titleHeader{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-left: 8px; /*change later*/
+    margin-top: 4px; /*change later*/
+}
+.lineVertical{
+    border-left: 3px solid #336833;
+    background: #618967;
+    height: 38px;
+    margin-left: 60px;
+    /* margin-top: 50px; */
+}
+.btn{
+    background-color: #57865e;
+    border: 1px solid white;
+    border-radius: 10px;
+    font-size: 1em;
+    width: 25px;
+}
+.lineHorizantal{
+    color:#504B4A;
+}
