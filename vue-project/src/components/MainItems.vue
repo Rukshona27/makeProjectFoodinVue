@@ -8,8 +8,8 @@
             <p class="textSizeHalf elem">{{ description }}</p>
             <p class="elem">{{price}} ₽</p>
             <div class="doJustFlex btnFlex">
-                <button type="button" v-on:click="addToBasket(id)" class="plus btn colorWhite">+</button>
-                <button type="button" class="minus btn colorWhite">-</button>
+                <button type="button" v-on:click="addToBasket(id)" class="plus btnMain colorWhite">+</button>
+                <button type="button" class="minus btnMain colorWhite">-</button>
             </div>
     </div>
 </template>

@@ -10,7 +10,7 @@
                 <h3 class="colorWhite">{{item.name}}</h3>
                 <p class="colorWhite">{{item.description}}</p>
                 <p class="colorWhite">{{item.price}}</p>
-                <button @click="removeFromBasket(index)" type="button" class="btn colorWhite"><span class="material-symbols-outlined">close</span></button>
+                <button @click="removeFromBasket(index)" type="button" class="btnMain colorWhite"><span class="material-symbols-outlined">close</span></button>
                 <hr class="lineHorizantal">
             </div>
             <div class="total">

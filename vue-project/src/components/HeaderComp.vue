@@ -2,14 +2,21 @@
     <div class="wrapper">
         <nav>
             <a href="#" class="colorWhite logo"><p>LOGOS</p></a>
-            <div>
-                <input class="input" type="text" placeholder="Введите адрес доставки">
+            <div class="doJustFlex divHead">
+                <span class="material-symbols-outlined colorWhite locationOnIcon">location_on</span>
+                <input class="inputHead" type="text" placeholder="Введите адрес доставки">
+                <span class="material-symbols-outlined colorWhite searchIcon">search</span>
             </div>
             <div class="contacts doJustFlex">
-                <span class="material-symbols-outlined colorWhite">phone_in_talk</span>
-                <div><p class="colorWhite textSizeHalf">Контакты</p><p class="colorWhite textSizeHalf">+7(916)510-57-59</p></div>
+                <span class="material-symbols-outlined colorWhite phoneIcon">phone_in_talk</span>
+                <div class="contacts2">
+                    <p class="contactTitle">Контакты</p>
+                    <p class="colorWhite contactTel">+7(916)510-57-59</p>
+                </div>
             </div>
-            <button class="button backgroundGreen colorWhite"><basket-button></basket-button></button>
+            <button class="btnHead">
+                <RouterLink class="colorWhite linkBtn" to="/basket">Корзина | <span class="colorBlack">{{basketLength}}</span></RouterLink>
+            </button>
         </nav>
         <div class="banner"></div>
         <hr>
@@ -21,6 +28,9 @@ import BasketButton from "./BasketButton.vue";
 export default{
     components:{
         BasketButton,
+    },
+    computed:{
+        basketLength(){return this.$store.getters.BASKET_LENGTH},
     }
 }
 </script>
@@ -29,18 +39,40 @@ export default{
     .logo{
         letter-spacing: 3px;
         text-decoration-line: none;
+        margin-top: 5px;
     }
     nav{
         display: flex;
         justify-content: space-around;
         padding: 15px;
     }
-    .input{
+    .divHead{
         background-color: #504B4A;
-        border: none;
         border-radius: 10px;
-        font-size: 1em;
-        height: 30px;
+    }
+    .searchIcon, .locationOnIcon{
+      font-size: 1.2rem;  
+      margin-bottom: 6px;
+      margin-right: 8px;
+    }
+    .phoneIcon{
+        background-color: #618967;
+        font-size: 1rem;
+        flex-grow: 1;
+        border-radius:8px;
+        padding: 3px;
+    }
+    .contacts2{
+        flex-grow: 2;
+    }
+    .contacts{
+        flex-direction: row;
+    }
+    .contactTitle{
+        color: #CFCFCF;
+    }
+    .linkBtn{
+        text-decoration-line: none;
     }
     /* fallback */
 @font-face {
@@ -52,9 +84,7 @@ export default{
 
 .material-symbols-outlined {
   font-family: 'Material Symbols Outlined';
-  font-weight: 300;
   font-style: normal;
-  font-size: 24px;
   line-height: 1;
   letter-spacing: normal;
   text-transform: none;
@@ -62,8 +92,6 @@ export default{
   white-space: nowrap;
   word-wrap: normal;
   direction: ltr;
-  background-color: #618967;
-  border-radius: 8px;
   padding-top: 3px;
 }
 </style>

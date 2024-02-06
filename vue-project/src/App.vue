@@ -15,7 +15,6 @@ export default{
 
 <template>
   <div class="wrapper">
-    app
     <header-comp></header-comp>
     <div class="wrapper2">
       <MainItems v-for="item in items"

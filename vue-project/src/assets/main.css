@@ -6,17 +6,63 @@
     html{
         font-size: 20px;
     }
-}
-@media(max-width: 600px){ /*ecли экрана меньше 1200*/
-    html{
-        font-size: 16px;
+    .contacts{
+      width: 160px;
+    }  
+    .contactTel, .contactTitle {
+      font-size: 0.8rem;
     }
-}
-@media(max-width: 600px) and (min-width:1200px){
+    .contacts2{
+      margin-left: 3%;
+    }
+    .inputHead{
+      background-color: #504B4A;
+      border: none;
+      font-size: 1rem;
+      width: 380px;
+    }
+    
+  }
+  @media(min-width: 700px) and (max-width:1200px){
     html{
         font-size: 18px;
     }
-}
+    .contacts{
+      width: 135px;
+    } 
+    .contactTel, .contactTitle {
+      font-size: 0.8rem;
+    }
+    .contacts2{
+      margin-left: 3%;
+    }
+    .inputHead{
+      background-color: #504B4A;
+      border: none;
+      font-size: 0.8rem;
+      width: 260px;
+    }
+  }
+  @media(max-width: 700px){ /*ecли экрана меньше 600*/
+    html{
+      font-size: 16px;
+    }
+    .contacts{
+    width: 110px;
+    } 
+    .contactTel, .contactTitle {
+      font-size: 0.6rem;
+    }
+    .contacts2{
+      margin-left: 2%;
+    }
+    .inputHead{
+      background-color: #504B4A;
+      border: none;
+      font-size: 0.8rem;
+      width: 200px;
+    }
+  }
 
 .wrapper{
     background-color: #29252b;
@@ -24,23 +70,9 @@
 .colorWhite{
     color: white;
 }
-.backgroundGreen{
-    background-color: #618967;
-    border-radius: 50%;
-}
 .doJustFlex{
     display: flex;
-}
-.button{
-    width: 6%;
-    height: 30px;
-    border-radius: 10px;
-}
-.textSizeHalf{
-    font-size: 0.5em;
-}
-hr{
-    color: #504B4A;
+    align-items: center;
 }
 .wrapper2{
     display: flex;
@@ -48,27 +80,39 @@ hr{
     width: 95%;
     margin: 50px auto;
 }
-.titleHeader{
-    font-style: normal;
-    font-weight: 700;
-    font-size: 1.6rem;
-    margin-left: 8px; /*change later*/
-    margin-top: 4px; /*change later*/
+/* hr{
+    color: #504B4A;
+} look later  */
+.lineHorizantal{
+    color:#504B4A;
 }
-.lineVertical{
-    border-left: 3px solid #336833;
-    background: #618967;
-    height: 38px;
-    margin-left: 60px;
-    /* margin-top: 50px; */
-}
-.btn{
+
+/*Header*/
+.btnHead{
+    background-color: #618967;
+    text-decoration-line: none;
+    width: 140px;
+    border-radius: 10px;
+    border: 1px solid #618967;
+    font-size: 0.8rem;
+  }
+  span.colorBlack{
+    color: black;
+    width: 22px;
+    border-radius: 10px;
+    background-color: white;
+    display: inline-block;
+    font-size: 0.8rem;
+  }
+
+/*MainItems*/
+.btnMain{
     background-color: #57865e;
     border: 1px solid white;
     border-radius: 10px;
     font-size: 1em;
     width: 25px;
 }
-.lineHorizantal{
-    color:#504B4A;
+.textSizeHalf{
+    font-size: 0.5em;
 }
