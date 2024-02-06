@@ -1,9 +1,9 @@
 <template>
-    <div class="wrapper">
+    <div class="wrapperBasket">
         <p>сделать ссылку на главную страницу</p>
         <div class="lineTitle doJustFlex">
-            <div class="lineVertical"></div>
-            <h1 class="colorWhite titleHeader">КОРЗИНА <span class="numBasket">(в корзине {{basketLength}} товара )</span></h1>
+            <span class="lineVertical"></span>
+            <h1 class="colorWhite titleName">КОРЗИНА <span class="numBasket">(в корзине {{basketLength}} товара )</span></h1>
         </div>
         <div class="wrapperBasket" >
             <div class="wrapperBasketItem" v-for='(item, index) in itemInB' :key="item.id">
@@ -50,13 +50,16 @@ export default {
 </script>
 
 <style scoped>
+.lineTitle{
+    padding: 1%;
+}
 .numBasket{
     color: #416346;
     font-size: 1rem;
 }
-.wrapperBasket{
+/* .wrapperBasket{
     background-color: #504B4A
-}
+} */
 /* fallback */
 @font-face {
   font-family: 'Material Symbols Outlined';

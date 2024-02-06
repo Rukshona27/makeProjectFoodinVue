@@ -6,10 +6,11 @@
                 <p class="textSizeHalf elem">{{ weight }}</p>
             </div>
             <p class="textSizeHalf elem">{{ description }}</p>
-            <p class="elem">{{price}} ₽</p>
-            <div class="doJustFlex btnFlex">
-                <button type="button" v-on:click="addToBasket(id)" class="plus btnMain colorWhite">+</button>
-                <button type="button" class="minus btnMain colorWhite">-</button>
+            <div class="doJustFlex flexBetween">
+                <p class="elem">{{price}} ₽</p>
+                <button type="button"  v-on:click="addToBasket(id)" class="btnMainB colorWhite doJustFlex flexAround">B корзинy <span class="material-symbols-outlined shoppingIcon">shopping_cart</span></button>
+                <!-- <button type="button" v-on:click="addToBasket(id)" class="plus btnMain colorWhite">+</button> -->
+                <!-- <button type="button" class="minus btnMain colorWhite">-</button> -->
             </div>
     </div>
 </template>
@@ -75,10 +76,17 @@
     .elem{
         padding-top: 6px;
     }
-    .btnFlex{
-        justify-content: end;
+    .flexBetween{
+        justify-content: space-between;
     }
-    .plus{
-        margin-right: 25px;
+    .btnMainB{
+        background-color: #618967;
+        border-radius: 10px;
+        border: 1px solid #618967;
+        font-size: 0.5rem;
+    }
+    .btnMainB{
+      width: 80px;
+      height: 30px;
     }
 </style>

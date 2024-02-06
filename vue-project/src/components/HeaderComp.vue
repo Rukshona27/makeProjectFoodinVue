@@ -18,6 +18,18 @@
                 <RouterLink class="colorWhite linkBtn" to="/basket">Корзина | <span class="colorBlack">{{basketLength}}</span></RouterLink>
             </button>
         </nav>
+        <hr>
+        <div class="menu">
+            <ul class="UlNone">
+                <a href="#"><li class="menuNav">Холодные закуски</li></a>
+                <a href="#"><li class="menuNav">Горячие закуски</li></a>
+                <a href="#"><li class="menuNav">Супы </li></a>
+                <a href="#"><li class="menuNav">Рыбные блюда</li></a>
+                <a href="#"><li class="menuNav">Гриль меню</li></a>
+                <a href="#"><li class="menuNav">Фирменные блюда</li></a>
+                <a href="#"><li class="menuNav">Напитки</li></a>
+            </ul>
+        </div>
         <div class="banner"></div>
         <hr>
     </div>
@@ -58,12 +70,12 @@ export default{
     .phoneIcon{
         background-color: #618967;
         font-size: 1rem;
-        flex-grow: 1;
+        flex-grow: 30%;
         border-radius:8px;
         padding: 3px;
     }
     .contacts2{
-        flex-grow: 2;
+        flex-grow: auto;
     }
     .contacts{
         flex-direction: row;
@@ -74,24 +86,18 @@ export default{
     .linkBtn{
         text-decoration-line: none;
     }
-    /* fallback */
-@font-face {
-  font-family: 'Material Symbols Outlined';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/materialsymbolsoutlined/v154/kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1v-p_4MrImHCIJIZrDCvHOej.woff2) format('woff2');
-}
-
-.material-symbols-outlined {
-  font-family: 'Material Symbols Outlined';
-  font-style: normal;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  display: inline-block;
-  white-space: nowrap;
-  word-wrap: normal;
-  direction: ltr;
-  padding-top: 3px;
-}
+    .UlNone{
+        display: flex;
+        list-style: none;
+        justify-content: space-evenly;
+    }
+    .UlNone a{
+        text-decoration-line: none;
+        color: #CFCFCF;
+    }
+    .UlNone a :hover{
+        text-decoration: underline;
+        text-decoration-color: #335337;
+        text-decoration-thickness: 3px;
+    }
 </style>
